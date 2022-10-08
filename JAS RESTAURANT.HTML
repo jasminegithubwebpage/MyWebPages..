@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+        
+    }
+    
+    .Container
+    {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(0,0,0,0.30),rgba(0,0,0,0.30)),url(https://thumbs.dreamstime.com/z/d-render-restaurant-interior-d-render-restaurant-interior-coffee-shop-213728485.jpg);
+        background-size:cover;
+        
+    }
+    .navbar
+    {
+        width: 85%;
+        margin:auto;
+     padding: 35px;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+    }
+    .logo
+    {
+        width: 120px;
+        cursor: pointer;
+        height: 100px;
+
+    }
+    .navbar ul li
+    {
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+    }
+    .navbar ul li
+    {
+        text-decoration: none;
+        text-transform: uppercase;
+        color:white;
+
+    }
+    .navbar ul li::after
+    {
+        content:"";
+        height: 3px;
+        width: 0%;
+        background: #009688;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+        
+    }
+    .navbar ul li:hover::after
+    {
+        width: 100%;
+    }
+    .Content
+    {
+        width: 100%;
+        position:absolute;
+        top: 50%;
+        transform: rotateY(-50%);
+        text-align: center;
+        color:white;
+}
+.Content h1
+    {
+        font-size: 70px;
+        margin-top: 0 px;
+        font-family: 'Times New Roman';
+        color:turquoise;
+        padding-top: 5 px;
+    }
+    .Content p{
+        margin: 20px auto;
+        font-weight: 150;
+        line-height: 25px;
+        font-family: 'Times New Roman';
+        font-size: x-large;
+        justify-content: space-between;
+        
+        
+    }
+     button
+    {
+        width: 200px;
+        padding: 15px;
+        text-align: center;
+        margin: 20px 10px;
+        border-radius: 25px;
+        font-weight: bold;
+        border: 2px solid #009688;
+        background: transparent;
+        color: white;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+     span
+    {
+        z-index: -1;
+        background-color: #009688;
+        height: 100%;
+        width: 100%;
+        border-radius: 25px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.5s;
+    }
+    button:hover span
+    {
+        width: 100%;
+        
+    }
+    button:hover{
+        border: none;
+        background-color: #009688;
+    }
+    .Container-2
+    {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url(https://img.freepik.com/free-vector/cartoon-indian-restaurant-background_52683-69329.jpg?w=900&t=st=1664989220~exp=1664989820~hmac=6bbdd153c4cfdce100c19d8a493c1aed5df1500ae84bf3e93dada1ec28e24211);
+        background-size:cover;
+        background-position: center;
+    }
+    .Content-2 h1{
+        color:white;
+        font-family: 'Times New Roman';
+        padding: 25px  0px 25px 25px;
+        font-size: 50px;
+        position: absolute;
+        
+    
+    }
+    .Content-2 p
+    {
+        color: white;
+        font-weight: 600;
+        padding-top: 20px;
+        padding-left: 25px;
+        font-size: medium;
+        position: absolute;
+        margin: 80px;
+    }
+    input[type=search]
+    {
+        width:600px;
+        padding: 8px 20px 8px 45px;
+        border: white solid 2px;
+        font-size: 18px;
+        border-radius: 25px;
+        background-position: 2% 50%;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-color: white;
+        transition: 0.5s all ease-in-out;
+        filter: brightness(170%);
+        float: right;
+        margin-right: 50px;
+        margin-top: 40px;
+        cursor: pointer;
+        position: relative;
+        
+
+
+    }
+    input[type=search]:focus, 
+    input[type=search]:not(:placeholder-shown)
+
+    {
+        width: 350px;
+        background-color: white;
+        filter: brightness(100%);
+
+    }
+    i{
+        color: white;
+        margin-right: 10px;
+        float: right;
+        size: 100px;
+        margin-top: 50px;
+        
+
+    }
+    .Items-1
+    {
+    
+        
+        
+        border: 8px solid;
+        border-image: linear-gradient(45deg,turquoise,greenyellow) 1;
+        border-width: 10px;
+        border-radius: 55px;
+        line-height: 30px;
+        width: fit-content;
+        border-radius: 25px;
+        padding:10px 15px 10px 15px;
+        font-size: 1.3em;
+        margin-left: 30px;
+        margin-bottom: 200px;
+        
+        place-items: center;
+        
+
+    }
+    .Items-1 img{
+        size:small;
+        
+        
+    }
+.Foods
+{
+        color: white;
+        text-align: center;
+        padding-top: 200px;
+        padding-left: 850px;
+        float: left;
+        margin-left: 360px;
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 100px;
+        
+        grid-area: foods;
+        padding: 10px;
+        
+
+}
+.Foods>div{
+    
+    text-align: center;
+    padding:10px 15px 10px 15px;
+    margin-bottom: 20px;
+    margin-top: 45px;
+    font-size: 20px;
+    height: 210px;
+    border: 8px solid;
+    border-image: linear-gradient(45deg,turquoise,greenyellow) 1;
+    grid-template-areas: 'foods foods foods foods foods';
+    margin-left: 15px;
+}
+.order-button
+{
+    background-color:#009688;
+    color:white;
+    border-radius: 100px;
+    border-width: 200px;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+    border-top: 300px;
+    margin-top: 300px;
+    
+    
+    
+   
+}
+.order-button:hover
+{
+    transition: 0.5s;
+    z-index: -1;
+    border: none;
+    background-color: blue;
+}
+
+@media all and (max-width:480px){
+  .navbar{
+    display: inline;
+  }
+  .Container{
+    display: block;
+  }
+  .Container-2{
+    position: relative;
+  }
+  .Container-2 .Foods{
+    position:absolute;
+    display:-moz-inline-grid block;
+  }
+  .h1
+  {
+    font-size:1.5rem ;
+  }
+  .p
+  {
+    font: size 1em;
+  }
+  .Container-2 .Search-bar
+  { 
+    float:left;
+  
+}
+.Foods{
+    display:grid;
+    grid-template-areas: 'foods foods';
+    gap:1rem;
+  }
+  .Foods:nth-child(1){
+    grid-area: Foods;
+  }
+  .Foods:nth-child(2){
+    grid-area: Foods;
+ }
+  
+}
+
+    
+
+
+  
+
+    
+</style>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JAS RESTAURANT</title>
+</head>
+<BODY> 
+   
+<div class="Container">
+    
+    <div class="navbar">
+        <img src="https://comps.gograph.com/jas-letter-logo-design-on-white-background-jas-creative-circle-letter-logo-concept-jas-letter-designjas-letter-logo-design-on-white-background-jas-creative-circle-letter-logo-concept-jas-letter-design_gg145356225.jpg" class="logo">
+    <ul>
+    <li><a>Home</a></li>
+    <li><a>About</a></li>
+    <li><a>Online-Booking</a></li>
+    <li><a>Services</a></li>
+    <li><a>Prices</a></li>
+    <li><a>Contact</a></li>
+   </ul>
+   </div>
+   <div class="Content">
+     <h1>JAS RESTAURANT</h1>
+     <p><b>Jas</b> hotel in Periyar Nillayam,Madurai.This is well-known establishment acts as a one-stop destination servicing customer<br>both local and from other parts of madurai
+    The Belief that customer satisfaction is an important as their products and service</p>
+     
+        <div class="button">
+        <button type="button"><span></span>ORDER NOW</button>
+        <button type="button"><span></span>VIEW-LIST</button>
+        </div>
+    </div> 
+</div> 
+ <div class="Container-2">
+    <div class="Content-2">
+        <h1>Here Your Fav Foods!!!</h1>
+        <p>Order Now TO Get 50% Off On First Order Delivery</p>
+    </div>    
+        <section>
+            <form action="">
+             <div class="Search-bar"> 
+            <input type="search"  placeholder="Search Foods">
+             <a href="#"> <i class="fa fa-search"></i> 
+             </a>
+             </div>
+             </form>
+            </section> 
+     
+             
+       <div class="Foods">
+        <div class="Items-1">
+        <img src="https://images.news18.com/ibnlive/uploads/2022/06/malabar-paratha-16561669553x2.jpg?impolicy=website&width=510&height=356" alt="porata-image" height="120" width="120">  
+        <h3 class="Food-title ">Porata</h3>
+    	<p class="price">₹13.00</p>
+        <a href="#" class="order-button">ORDER</a>
+        </div>
+        <div class="Items-2">
+        <img src="https://thumbs.dreamstime.com/b/traditional-indian-food-vegetable-biryani-rice-fried-42124640.jpg" alt="Veg-Briyani" height="120" width="190">  
+        <h3 class="Food-title ">Veg-Briyani</h3>
+    	<p class="price">₹150.00</p>
+        <a href="#" class="order-button">ORDER</a>
+        </div>
+        <div class="Items-3">
+            <img src="https://assets.cntraveller.in/photos/60ba1de1591f977adc9777a2/16:9/w_1280,c_limit/dosa-recipes-1366x768.jpg"  alt="porata-image" height="120" width="120">     
+        <h3 class="Food-title ">Dosa</h3>
+    	<p class="price">₹25.00</p>
+        <a href="#" class="order-button">ORDER</a>
+        </div>
+        <div class="Items-4">
+            <img src="https://t3.ftcdn.net/jpg/03/62/02/26/360_F_362022640_fZ6UM0JycJlFDdBiR1pYlNddKfdGvYwR.jpg"  alt="porata-image" height="120" width="120"> 
+        <h3 class="Food-title ">Idly</h3>
+    	<p class="price">₹10.00</p>
+        <a href="#" class="order-button">ORDER</a>
+        </div>
+        <div class="Items-5">
+            <img src="https://img-global.cpcdn.com/recipes/c6ab1c63858c24b3/1200x630cq70/photo.jpg"  alt="porata-image" height="120" width="120"> 
+        <h3 class="Food-title ">Mutton-Briyani</h3>
+    	<p class="price">₹250.00</p>
+        <a href="#" class="order-button">ORDER</a>
+        </div>
+        <div class="Items-6">
+            <img src="https://i.ytimg.com/vi/CIVBFsEyViQ/maxresdefault.jpg"  alt="porata-image" height="120" width="120"> 
+        <h3 class="Food-title ">Chicken-Fried-Rice</h3>
+    	<p class="price">₹180.00</p>
+        <a href="#" class="order-button">ORDER</a>
+        </div>
+        <div class="Items-7">
+            <img src="https://rakskitchen.net/wp-content/uploads/2010/03/chilli-parotta-feat.jpg"  alt="porata-image" height="120" width="120"> 
+        <h3 class="Food-title ">Chilli-Parota</h3>
+    	<p class="price">₹100.00</p>
+        <a href="#" class="order-button">ORDER</a>
+        </div>
+        <div class="Items-8">
+            <img src="https://static.toiimg.com/thumb/56665108.cms?width=1200&height=900"  alt="porata-image" height="120" width="120"> 
+        <h3 class="Food-title ">Chappathi</h3>
+    	<p class="price">₹30.00</p>
+        <a href="#" class="order-button">ORDER</a>
+        </div>
+         
+    </div>
+</div>
+</BODY>
+</html>
